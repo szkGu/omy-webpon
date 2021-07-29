@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=0.5">
+  <title>おまゆのウェブポンを集計するやつ</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="body">
+    <div class="container">
+      <div class="bg-title"><h1>おまゆのウェブポンを集計するやつ</h1></div>
+      <textarea class="text-input" id="goods-input" placeholder="メールに記載されている獲得商品一覧をここにコピペしてください。"></textarea>
+      <div>
+        <div id="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>賞</th>
+                <th colspan="2">内容</th>
+                <th>数量</th>
+                <th>小計</th>
+              </tr>
+              <tr>
+                <td class="text-center">激レア</td>
+                <td colspan="2">BIGクッション</td>
+                <td class="text-right" id="OMY_SR01">0</td>
+                <td class="text-right" id="OMY_SR">0</td>
+              </tr>
+              <tr>
+                <td class="text-center">レア</td>
+                <td colspan="2">直筆サイン入りアクリルプレート</td>
+                <td class="text-right" id="OMY_R01">0</td>
+                <td class="text-right" id="OMY_R">0</td>
+              </tr>
+              <tr>
+                <td class="text-center" rowspan="2">A</td>
+                <td rowspan="2">直筆サイン入りブロマイド</td>
+                <td class="dot-btm dashed-btm ">A</td>
+                <td class="dot-btm dashed-btm text-right" id="OMY_A01">0</td>
+                <td class="text-right" id="OMY_A" rowspan="2">0</td>
+              </tr>
+              <tr>
+                <td class="">B</td>
+                <td class="text-right" id="OMY_A02">0</td>
+              </tr>
+              <tr>
+                <td class="text-center" rowspan="2">B</td>
+                <td rowspan="2">スマホスタンド</td>
+                <td class="dot-btm dashed-btm ">A</td>
+                <td class="dot-btm dashed-btm text-right" id="OMY_B01">0</td>
+                <td class="text-right" id="OMY_B" rowspan="2">0</td>
+              </tr>
+              <tr>
+                <td class="">B</td>
+                <td class="text-right" id="OMY_B02">0</td>
+              </tr>
+              <tr>
+                <td class="text-center" rowspan="5">C</td>
+                <td rowspan="5">アクリルスタンドキーホルダー</td>
+                <td class="dashed-btm ">A</td>
+                <td class="dashed-btm text-right" id="OMY_C01">0</td>
+                <td class="text-right" id="OMY_C" rowspan="5">0</td>
+              </tr>
+              <tr>
+                <td class="dashed-btm ">B</td>
+                <td class="dashed-btm text-right" id="OMY_C02">0</td>
+              </tr>
+              <tr>
+                <td class="dashed-btm ">C</td>
+                <td class="dashed-btm text-right" id="OMY_C03">0</td>
+              </tr>
+              <tr>
+                <td class="dashed-btm ">D</td>
+                <td class="dashed-btm text-right" id="OMY_C04">0</td>
+              </tr>
+              <tr>
+                <td>E</td>
+                <td class="text-right" id="OMY_C05">0</td>
+              </tr>
+              <tr>
+                <td class="text-center" rowspan="2">D</td>
+                <td rowspan="2">ボールペン</td>
+                <td class="dashed-btm ">A</td>
+                <td class="dashed-btm text-right" id="OMY_D01">0</td>
+                <td class="text-right" id="OMY_D" rowspan="2">0</td>
+              </tr>
+              <tr>
+                <td>B</td>
+                <td class="text-right" id="OMY_D02">0</td>
+              </tr>
+              <tr>
+                <td class="text-center" rowspan="7">E</td>
+                <td rowspan="7">スクエア缶バッジ</td>
+                <td class="dashed-btm ">A</td>
+                <td class="dashed-btm text-right" id="OMY_E01">0</td>
+                <td class="text-right" id="OMY_E" rowspan="7">0</td>
+              </tr>
+              <tr>
+                <td class="dashed-btm ">B</td>
+                <td class="dashed-btm text-right" id="OMY_E02">0</td>
+              </tr>
+              <tr>
+                <td class="dashed-btm ">C</td>
+                <td class="dashed-btm text-right" id="OMY_E03">0</td>
+              </tr>
+              <tr>
+                <td class="dashed-btm ">D</td>
+                <td class="dashed-btm text-right" id="OMY_E04">0</td>
+              </tr>
+              <tr>
+                <td class="dashed-btm ">E</td>
+                <td class="dashed-btm text-right" id="OMY_E05">0</td>
+              </tr>
+              <tr>
+                <td class="dashed-btm ">F</td>
+                <td class="dashed-btm text-right" id="OMY_E06">0</td>
+              </tr>
+              <tr>
+                <td>G</td>
+                <td class="text-right" id="OMY_E07">0</td>
+              </tr>
+              <tr>
+                <td class="text-center" rowspan="10">F</td>
+                <td rowspan="10">缶バッジ</td>
+                <td class="dashed-btm ">A</td>
+                <td class="dashed-btm text-right" id="OMY_F01">0</td>
+                <td class="text-right" id="OMY_F" rowspan="10">0</td>
+              </tr>
+              <tr>
+                <td class="dashed-btm ">B</td>
+                <td class="dashed-btm text-right" id="OMY_F02">0</td>
+              </tr>
+              <tr>
+                <td class="dashed-btm ">C</td>
+                <td class="dashed-btm text-right" id="OMY_F03">0</td>
+              </tr>
+              <tr>
+                <td class="dashed-btm ">D</td>
+                <td class="dashed-btm text-right" id="OMY_F04">0</td>
+              </tr>
+              <tr>
+                <td class="dashed-btm ">E</td>
+                <td class="dashed-btm text-right" id="OMY_F05">0</td>
+              </tr>
+              <tr>
+                <td class="dashed-btm ">F</td>
+                <td class="dashed-btm text-right" id="OMY_F06">0</td>
+              </tr>
+              <tr>
+                <td class="dashed-btm ">G</td>
+                <td class="dashed-btm text-right" id="OMY_F07">0</td>
+              </tr>
+              <tr>
+                <td class="dashed-btm ">H</td>
+                <td class="dashed-btm text-right" id="OMY_F08">0</td>
+              </tr>
+              <tr>
+                <td class="dashed-btm ">I</td>
+                <td class="dashed-btm text-right" id="OMY_F09">0</td>
+              </tr>
+              <tr>
+                <td>J</td>
+                <td class="text-right" id="OMY_F10">0</td>
+              </tr>
+              <tr>
+                <td class="none-btm-left" colspan="3"></td>
+                <td class="text-right">合計：</td>
+                <td class="text-right" id="OMY_SUM">0</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div style="text-align: center; line-height: 2.5;">
+        <a href="" id="ss" download="OMY_webpon.png">画像として保存</a><br>
+        <a href="https://webpon.net/shop/OMY/plan/OMY" target="_blank" rel="noopener noreferrer">もっと引く</a>
+      </div>
+      <hr>
+      <ul>
+        <li>このツールは非公式です。</li>
+        <li>入力されたデータの収集等は一切行っておりません。</li>
+        <li>数が合わない場合は、メールの折り畳まれた部分にコピペ漏れが無いかどうか確認してみてください。</li>
+        <li>バグ報告は <a href="https://twitter.com/szkGu" target="_blank" rel="noopener noreferrer">@szkGu</a> まで。</li>
+      </ul>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/dom-to-image@2.6.0/dist/dom-to-image.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
